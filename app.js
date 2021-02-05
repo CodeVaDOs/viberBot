@@ -19,8 +19,9 @@ bot.on(BotEvents.SUBSCRIBED, response => {
 });
 
 bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
-    if (message.toLowerCase() === "ты чей?")
-    response.send(new TextMessage(`Тартаковский`));
+    console.log("MESSAGE: ", message)
+    // if (message.toLowerCase() === "ты чей?")
+    response.send(new TextMessage("test"));
 });
 
 const port = process.env.PORT || 3000;
