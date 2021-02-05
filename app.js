@@ -23,6 +23,7 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
     switch (message.text.toLowerCase()) {
         case "ты чей?":
             response.send(new TextMessage("Мой конечно же"));
+            break;
         default:
             response.send(new TextMessage(message.text));
     }
