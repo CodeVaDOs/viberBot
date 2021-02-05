@@ -19,7 +19,8 @@ bot.on(BotEvents.SUBSCRIBED, response => {
 });
 
 bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
-    response.send(new TextMessage(`Message received.`));
+    if (message.toLowerCase() === "ты чей?")
+    response.send(new TextMessage(`Тартаковский`));
 });
 
 const port = process.env.PORT || 3000;
