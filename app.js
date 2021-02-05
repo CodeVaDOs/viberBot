@@ -24,10 +24,7 @@ console.log("env", process.env)
 
 const webhookUrl = "https://viber-kmrf-bot.herokuapp.com";
 
-const httpsOptions = {
-
-};
-https.createServer(httpsOptions, bot.middleware()).listen(port, () => bot.setWebhook(webhookUrl));
+https.createServer(bot.middleware()).listen(port, () => bot.setWebhook(webhookUrl));
 
 
 module.exports = app;
