@@ -19,11 +19,13 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
       response.send(new TextMessage("Мой конечно же"));
       break;
     case "cmd":
+      console.log(new KeyboardMessage(SAMPLE_KEYBOARD))
       response.send(new KeyboardMessage(SAMPLE_KEYBOARD))
       break;
     default:
       response.send(new TextMessage(message.text));
   }
-});
+})
+
 
 module.exports = bot
