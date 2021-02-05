@@ -16,6 +16,8 @@ viber = Api(BotConfiguration(
 ))
 
 
+viber.set_webhook('https://viber-kmrf-bot.herokuapp.com/')
+
 @app.route('/', methods=['POST'])
 def incoming():
     if not viber.verify_signature(request.get_data(), request.headers.get('X-Viber-Content-Signature')):
