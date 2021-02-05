@@ -18,4 +18,10 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
 
 app.use("https://viber-kmrf-bot.herokuapp.com", bot.middleware());
 
+const port = process.env.PORT || 8080;
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
+
 module.exports = app;
