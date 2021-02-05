@@ -14,15 +14,20 @@ const bot = new ViberBot({
 app.use("/viber/webhook", bot.middleware());
 
 bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
-  response.send(message);
+  response.send(message + " МОЙ БОТ");
 });
 
 const https = require('https');
 const port = process.env.PORT || 8080;
 
-const webhookUrl = process.env.WEBHOOK_URL;
+console.log("env", process.env)
 
-const httpsOptions = {};
+const webhookUrl = process.env.WEBHOOK_URL;
+console.log("WEB HOOK URL", webhookUrl)
+
+const httpsOptions = {
+
+};
 https.createServer(httpsOptions, bot.middleware()).listen(port, () => bot.setWebhook(webhookUrl));
 
 
