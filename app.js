@@ -3,6 +3,8 @@ const express = require('express');
 const ViberBot = require('viber-bot').Bot;
 const BotEvents = require('viber-bot').Events;
 
+const TextMessage = require('viber-bot').Message.Text;
+
 const app = express();
 
 const bot = new ViberBot({
