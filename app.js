@@ -24,7 +24,7 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
         case "ты чей?":
             response.send(new TextMessage("Мой конечно же"));
         default:
-            response.send(message.text);
+            response.send(new TextMessage(message.text));
     }
 });
 
