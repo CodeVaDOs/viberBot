@@ -35,7 +35,7 @@ const SAMPLE_KEYBOARD = {
     ]
 };
 
-const message = new KeyboardMessage(SAMPLE_KEYBOARD);
+const keyboard = new KeyboardMessage(SAMPLE_KEYBOARD);
 
 bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
     console.log("MESSAGE: ", message)
@@ -44,7 +44,7 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
             response.send(new TextMessage("Мой конечно же"));
             break;
         case "cmd":
-            response.send(message)
+            response.send(keyboard)
             break;
         default:
             response.send(new TextMessage(message.text));
