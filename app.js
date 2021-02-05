@@ -20,8 +20,12 @@ bot.on(BotEvents.SUBSCRIBED, response => {
 
 bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
     console.log("MESSAGE: ", message)
-    // if (message.toLowerCase() === "ты чей?")
-    response.send(new TextMessage("test"));
+    switch (message.text.toLowerCase()) {
+        case "ты чей?":
+            response.send(new TextMessage("Мой конечно же"));
+        default:
+            response.send(message.text);
+    }
 });
 
 const port = process.env.PORT || 3000;
