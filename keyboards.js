@@ -3,8 +3,8 @@ const SAMPLE_KEYBOARD = {
   "Revision": 1,
   "Buttons": [
     {
-      "Columns": 3,
-      "Rows": 1,
+      "Columns": 10,
+      "Rows": 2,
       "BgColor": "#004dff",
       "Text": 'KMRF',
       "ActionType": "open-url",
