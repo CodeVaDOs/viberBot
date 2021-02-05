@@ -22,13 +22,13 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
 
 const port = process.env.PORT || 3000;
 
-app.use("https://viber-kmrf-bot.herokuapp.com", bot.middleware());
+app.use("/viber/webhook", bot.middleware());
 
 console.log(process.env)
 
 app.listen(port, () => {
     console.log(`Application running on port: ${port}`);
-    bot.setWebhook(`https://viber-kmrf-bot.herokuapp.com`).catch(error => {
+    bot.setWebhook(`https://viber-kmrf-bot.herokuapp.com/viber/webhook`).catch(error => {
         console.log('Can not set webhook on following server. Is it running?');
         console.error(error);
         process.exit(1);
