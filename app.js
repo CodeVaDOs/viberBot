@@ -22,8 +22,7 @@ const port = process.env.PORT || 8080;
 
 console.log("env", process.env)
 
-const webhookUrl = process.env.WEBHOOK_URL;
-console.log("WEB HOOK URL", webhookUrl)
+const webhookUrl = "https://viber-kmrf-bot.herokuapp.com";
 
 const httpsOptions = {
 
