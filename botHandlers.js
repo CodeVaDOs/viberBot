@@ -25,3 +25,5 @@ bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
       response.send(new TextMessage(message.text));
   }
 });
+
+module.exports = bot

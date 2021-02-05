@@ -1,7 +1,3 @@
-module.exports = {
-  SAMPLE_KEYBOARD
-}
-
 const SAMPLE_KEYBOARD = {
   "Type": "keyboard",
   "Revision": 1,
@@ -17,3 +13,6 @@ const SAMPLE_KEYBOARD = {
   ]
 };
 
+module.exports = {
+  SAMPLE_KEYBOARD
+}
