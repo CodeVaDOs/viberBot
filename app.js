@@ -11,20 +11,11 @@ const bot = new ViberBot({
   avatar: "http://viber.com/avatar.jpg" // It is recommended to be 720x720, and no more than 100kb.
 });
 
-app.use("/viber/webhook", bot.middleware());
 
 bot.on(BotEvents.MESSAGE_RECEIVED, (message, response) => {
   response.send(message + " МОЙ БОТ");
 });
 
-const https = require('https');
-const port = process.env.PORT || 8080;
-
-console.log("env", process.env)
-
-const webhookUrl = "https://viber-kmrf-bot.herokuapp.com";
-
-https.createServer(bot.middleware()).listen(port, () => bot.setWebhook(webhookUrl));
-
+app.use("https://viber-kmrf-bot.herokuapp.com", bot.middleware());
 
 module.exports = app;
