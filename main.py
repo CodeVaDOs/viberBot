@@ -16,7 +16,6 @@ viber = Api(BotConfiguration(
 ))
 
 
-viber.set_webhook('https://viber-kmrf-bot.herokuapp.com/')
 
 @app.route('/', methods=['POST'])
 def incoming():
@@ -42,3 +41,4 @@ def incoming():
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=os.environ.get('PORT'), debug=True)
+    viber.set_webhook('https://viber-kmrf-bot.herokuapp.com/')
