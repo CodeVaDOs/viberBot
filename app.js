@@ -23,14 +23,12 @@ const SAMPLE_KEYBOARD = {
     "Revision": 1,
     "Buttons": [
         {
-            "Columns": 3,
-            "Rows": 2,
-            "BgColor": "#e6f5ff",
-            "BgMedia": "http://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg",
-            "BgMediaType": "picture",
-            "BgLoop": true,
-            "ActionType": "reply",
-            "ActionBody": "Yes"
+            "Columns": 1,
+            "Rows": 1,
+            "BgColor": "#85bb65",
+            "Text": 'KMRF',
+            "ActionType": "open-url",
+            "ActionBody": "https://kmrf.kiev.ua"
         }
     ]
 };
